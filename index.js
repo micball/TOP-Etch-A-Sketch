@@ -70,12 +70,10 @@ function buttonValidator(){
         return response;
     }
 }
-// When this button creates a grid, it needs to delete the previous grid .block(s) and generate new ones
-// It should then populate hte screen with these new .block divs
 
 
-// set limit for maximum input number
-// set validator for user inputs
 // remove old grid on button press
 // create new grid on button press
 // insert new grid on button press
+// sizing is broken again, fix this
+// fix button layout and positioning
