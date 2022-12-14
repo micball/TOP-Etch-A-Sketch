@@ -1,0 +1,38 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.body {
+    display: flex;
+    padding: 15px;
+}
+
+.outerBox {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: pink;
+    padding: 0;
+    margin: auto;
+    margin-top: 50px;
+}
+
+.block {
+    flex: 1 1 auto;
+    max-width: 10%;
+    max-height: 10%;
+    min-width: 10%;
+    min-height: 10%;
+}
+
+.highlighted {
+ background-color: darkslategray;
+}
+
+button {
+    margin-left: auto;
+
+}
