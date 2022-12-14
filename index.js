@@ -36,18 +36,22 @@ function createBoard(rows){
 
 createSetupButton();
 
+let blockExists;
+
 function createSetupButton(){
     const setupButton = document.createElement('button');
     setupButton.textContent = 'Choose Number of Rows';
     setupButton.setAttribute('id', 'setup');
-    const outside = document.querySelector('body');
-    outside.appendChild(setupButton);
+    const titleBox = document.querySelector('.titleBox');
+    titleBox.appendChild(setupButton);
     const btn = document.querySelector('#setup');
     btn.onclick = () => {
         let rows = buttonValidator();
+        removeBlocks();
+        blockExists = 1;
         createBoard(rows);
-        }
     }
+}
 
 
 function buttonValidator(){
@@ -71,9 +75,12 @@ function buttonValidator(){
     }
 }
 
+function removeBlocks(){
+    if (blockExists == 1) {
+        while (body.firstChild){
+            body.firstChild.classList.remove(`.highlighted`)
+            body.removeChild(body.firstChild);
+        };
+    }
+}
 
-// remove old grid on button press
-// create new grid on button press
-// insert new grid on button press
-// sizing is broken again, fix this
-// fix button layout and positioning
